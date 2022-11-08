@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  grid-template-columns: [col-1] 40px [col-2] 50px [col-3] auto [col-4] 50px [col-5] 40px [end];
+  grid-template-rows: [line-1] 25% [line-2] 100px [line-3] auto [line-4];
+  div {
+    border: 1px solid black;
+  }
+}
+
+.grid2 {
+  border: 1px dashed blue;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header header header'
+    'main main . sidebar'
+    'footer footer footer footer';
+
+  div {
+    border: 1px solid black;
+  }
+  .item-a {
+    grid-area: header;
+  }
+  .item-b {
+    grid-area: main;
+  }
+  .item-c {
+    grid-area: sidebar;
+  }
+  .item-d {
+    grid-area: footer;
+  }
+}
